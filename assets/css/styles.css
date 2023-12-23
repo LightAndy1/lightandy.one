@@ -80,6 +80,12 @@ button.last {
 
 div.bg {
   height: calc(100vh - 80px);
+  width: 50vw;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(74, 152, 228, 0.05) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .mousey {
