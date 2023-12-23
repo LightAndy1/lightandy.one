@@ -5,6 +5,24 @@ function goToAnchor(id) {
   element.scrollIntoView({ behavior: "smooth" });
 }
 
+function copy(text) {
+  navigator.clipboard.writeText(text);
+
+  try {
+    switch (text) {
+      case "@lightandy":
+        alert(`Discord tag was copied to your clipboard.`);
+        break;
+
+      default:
+        alert(`Successfully copied ${text}`);
+        break;
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
 
