@@ -1,3 +1,127 @@
+:root {
+  --text: #e5eef6;
+  --background: #070f17;
+  --primary: #94bde5;
+  --secondary: #1b538a;
+  --accent: #4a98e4;
+}
+
 body {
-  color: black;
+  background-color: var(--background);
+  margin: 0;
+}
+
+header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 20vw;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--background);
+  transition: opacity 0.2s cubic-bezier(0, 0, 0, 1),
+    border-bottom 0.2s cubic-bezier(0, 0, 0, 1);
+}
+
+header:hover {
+  opacity: 1 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header img {
+  height: 75px;
+  width: 75px;
+}
+
+header div {
+  max-height: fit-content;
+  margin-left: 58%;
+  cursor: pointer;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-vertical {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  margin-right: 25px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.5rem;
+  font-family: "Caudex";
+  transition: color 0.2s cubic-bezier(0, 0, 0, 1);
+}
+
+button:hover {
+  color: var(--primary);
+}
+
+button.last {
+  margin-right: 0;
+}
+
+div.bg {
+  height: calc(100vh - 80px);
+}
+
+.mousey {
+  margin-top: 50px;
+  width: 3px;
+  padding: 11px 12px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 2rem;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+
+.scroller {
+  width: 3px;
+  height: 6px;
+  border-radius: 1rem;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0, 0, 0, 1);
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+div.bg h1 {
+  margin-bottom: 25px;
+}
+
+div.bg h2 {
+  margin-top: 0;
 }

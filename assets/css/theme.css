@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css?family=Tenor%20Sans:400|Caudex:400");
+
+body {
+  font-family: "Gothic A1";
+  font-weight: 400;
+  color: #e5eef6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  font-family: "Tenor Sans";
+  font-weight: 700;
+  color: #e5eef6;
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+h1 {
+  font-size: 5.652rem; /* 90.4px */
+}
+
+h2 {
+  font-size: 3.997rem; /* 64px */
+}
+
+h3 {
+  font-size: 2.827rem; /* 45.28px */
+}
+
+h4 {
+  font-size: 1.999rem; /* 32px */
+}
+
+h5 {
+  font-size: 1.414rem; /* 22.56px */
+}
+
+p,
+small {
+  font-size: 0.707rem; /* 11.36px */
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}

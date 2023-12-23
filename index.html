@@ -6,11 +6,38 @@
 
     <title>LightAndy's Portfolio</title>
 
+    <link rel="stylesheet" href="./assets/css/theme.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <link rel="icon" type="image/png" href="./assets/img/logo.webp" />
 
     <script src="./assets/js/main.js"></script>
   </head>
   <body>
-    <h1>LightAndy's Portfolio</h1>
+    <a id="top"></a>
+    <header class="flex-row flex-vertical">
+      <a onclick="goToAnchor('top')">
+        <img src="./assets/img/logo.webp" alt="Light Logo"
+      /></a>
+      <div class="flex-row flex-center">
+        <button type="button" onclick="goToAnchor('about')">About Me</button>
+        <button type="button" onclick="goToAnchor('portfolio')">
+          Portfolio
+        </button>
+        <button type="button" class="last" onclick="goToAnchor('contact')">
+          Contact
+        </button>
+      </div>
+    </header>
+    <main class="first flex-center">
+      <div class="bg flex-col flex-center">
+        <h1>My name is Andy</h1>
+        <h2>I'm a web developer</h2>
+        <a onclick="goToAnchor('about')">
+          <div class="mousey">
+            <div class="scroller"></div></div
+        ></a>
+      </div>
+    </main>
   </body>
 </html>
