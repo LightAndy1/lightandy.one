@@ -9,6 +9,11 @@
 body {
   background-color: var(--background);
   margin: 0;
+  margin-bottom: 3em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 header {
@@ -17,24 +22,33 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: var(--background);
+  background-color: rgba(7, 15, 23, 0.05);
   transition: opacity 0.2s cubic-bezier(0, 0, 0, 1),
     border-bottom 0.2s cubic-bezier(0, 0, 0, 1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 header:hover {
-  opacity: 1 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+header .head-img {
+  margin-bottom: 79px;
 }
 
 header img {
-  height: 75px;
-  width: 75px;
+  position: absolute;
+  top: 0;
+  height: 100px;
+  width: 100px;
+  margin-top: -10px;
 }
 
 header div {
+  max-height: -moz-fit-content;
   max-height: fit-content;
-  margin-left: 58%;
+  margin-left: 64%;
   cursor: pointer;
 }
 
@@ -80,7 +94,7 @@ button.last {
 
 div.bg {
   height: calc(100vh - 80px);
-  width: 50vw;
+  width: 55vw;
   background: radial-gradient(
     50% 50% at 50% 50%,
     rgba(74, 152, 228, 0.05) 0%,
@@ -130,4 +144,210 @@ div.bg h1 {
 
 div.bg h2 {
   margin-top: 0;
+}
+
+.about .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 50px;
+  padding: 0 20vw;
+  z-index: 100;
+}
+
+.about .right {
+  text-align: right;
+}
+
+.portfolio-main {
+  margin-top: -100px;
+}
+
+.portfolio-main img {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  height: 250px;
+  width: 444px;
+  border-radius: 10px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: transform 0.2s cubic-bezier(0, 0, 0, 1);
+}
+
+.projects img:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.portfolio-main h4 {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin-top: -50px;
+  margin-left: 17px;
+  margin-bottom: 10px;
+  text-align: left;
+  transition: transform 0.2s cubic-bezier(0.28, 0.95, 0.19, 1),
+    color 0.2s cubic-bezier(0, 0, 0, 1);
+  pointer-events: none;
+}
+
+.portfolio-main .web:hover h4 {
+  transform: scale(1.1) translateX(10px) translateY(-10px);
+}
+
+.portfolio-main .other-p:hover h4 {
+  transform: scale(1.1) translateX(10px) translateY(-10px);
+}
+
+.projects {
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.projects:last-child {
+  margin-bottom: 0;
+}
+
+.tuppershop.web:hover h4 {
+  color: #e9c770;
+}
+
+.maddoxpage.web:hover h4 {
+  color: #298cf7;
+}
+
+.broderie.web:hover h4 {
+  color: #f0be62;
+}
+
+.nitrohub.web:hover h4 {
+  color: #f17cfb;
+}
+
+.duckmath.web:hover h4 {
+  color: #a9da23;
+}
+
+.minifier.web:hover h4 {
+  color: #3e5ad8;
+}
+
+.moreslabs.other-p:hover h4 {
+  color: #e47357;
+}
+
+.netherlink.other-p:hover h4 {
+  color: #e94840;
+}
+
+a#about {
+  position: absolute;
+  margin-top: -150px;
+  z-index: 2;
+}
+
+a#portfolio {
+  position: absolute;
+  margin-top: -175px;
+  z-index: 2;
+}
+
+div.about img.behind {
+  height: 500px;
+  width: auto;
+  -webkit-filter: blur(50px);
+  filter: blur(50px);
+  border-radius: 100%;
+  -webkit-mask-image: none;
+  mask-image: none;
+  opacity: 0.1;
+  animation: pulsing 10s infinite;
+  z-index: -2;
+}
+
+div.about img {
+  position: absolute;
+  margin-top: 575px;
+  margin-left: -1275px;
+  transition: filter 0.75s cubic-bezier(0, 0, 0, 1), margin 1s ease;
+  transform: rotate(-15deg);
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  height: 333px;
+  width: auto;
+  -webkit-mask-image: radial-gradient(ellipse, black 25%, rgba(0, 0, 0, 0) 67%);
+  mask-image: radial-gradient(ellipse, black 25%, rgba(0, 0, 0, 0) 67%);
+}
+
+@media only screen and (min-width: 2220px) {
+  div.about img {
+    margin-left: -1677px;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  div.about img {
+    margin-left: -900px;
+    margin-top: 677px;
+  }
+}
+
+div.about img:hover {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}
+
+@keyframes pulsing {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.11;
+  }
+}
+
+p a {
+  transition: color 0.2s cubic-bezier(0, 0, 0, 1);
+}
+
+p a:hover {
+  color: var(--accent);
+}
+
+p a.github:hover {
+  color: #4078c0;
+}
+
+p a.insta:hover {
+  color: #e1306c;
+}
+
+p a.x:hover {
+  color: #1da1f2;
+}
+
+p a.discord:hover {
+  color: #5865f2;
+}
+
+p a.telegram:hover {
+  color: #2aabee;
+}
+
+p a.youtube:hover {
+  color: #ff0000;
+}
+
+p a.reddit:hover {
+  color: #ff4500;
 }
