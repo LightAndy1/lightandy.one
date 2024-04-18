@@ -11,6 +11,7 @@ h2,
 h3,
 h4,
 h5,
+small,
 p,
 a {
   font-family: "Tenor Sans";
@@ -42,9 +43,9 @@ h5 {
   font-size: 1.414rem; /* 22.56px */
 }
 
-p,
-small {
-  font-size: 0.707rem; /* 11.36px */
+small,
+p {
+  font-size: 1rem; /* 16px */
 }
 
 a {
