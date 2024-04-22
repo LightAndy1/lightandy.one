@@ -1,0 +1,64 @@
+:root {
+  --text: #e5eef6;
+  --background: #070f17;
+  --primary: #94bde5;
+  --secondary: #1b538a;
+  --accent: #4a98e4;
+}
+
+a#images {
+  position: absolute;
+  margin-top: -80px;
+  z-index: 2;
+}
+
+div.images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 55%;
+  margin: 0 auto;
+}
+
+figure img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+figure {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  max-width: 100%;
+}
+
+figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 4px;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.3s cubic-bezier(0, 0, 0, 1),
+    transform 0.3s cubic-bezier(0, 0.75, 0, 1);
+}
+
+figure:hover figcaption {
+  transform: scale(1);
+  opacity: 1;
+}

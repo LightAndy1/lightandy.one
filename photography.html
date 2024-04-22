@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>LightAndy's Photography Portfolio</title>
+
+    <link rel="stylesheet" href="./assets/css/theme.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/photography.css" />
+
+    <link rel="icon" type="image/png" href="./assets/img/logo.webp" />
+
+    <script src="./assets/js/main.js"></script>
+  </head>
+  <body>
+    <a id="top"></a>
+    <a href="/"
+      ><button type="button" class="photo">
+        <img src="./assets/img/back.svg" alt="Back Icon" />
+        Go back
+      </button></a
+    >
+    <header class="flex-row flex-vertical">
+      <a class="head-img" onclick="goToAnchor('top')">
+        <img src="./assets/img/logo.webp" alt="Light Logo" />
+      </a>
+      <div class="flex-row flex-center">
+        <a href="/#about"><button type="button">About Me</button></a>
+        <button type="button" onclick="goToAnchor('images')">Images</button>
+        <button type="button" class="last" onclick="goToAnchor('hire')">
+          Hire
+        </button>
+      </div>
+    </header>
+    <main class="first flex-center">
+      <div class="bg flex-col flex-center">
+        <h1>My name is Andy</h1>
+        <h2>I'm a photographer</h2>
+        <a onclick="goToAnchor('images')">
+          <div class="mousey">
+            <div class="scroller"></div></div
+        ></a>
+      </div>
+    </main>
+    <a id="images"></a>
+    <div class="flex-center flex-col">
+      <h3>Freelance Photography</h3>
+      <div class="images">
+        <figure>
+          <img
+            src="./assets/img/photography/porsche-1.webp"
+            alt="Porsche Wheel"
+          />
+          <figcaption><h4>Porsche Wheel</h4></figcaption>
+        </figure>
+        <figure>
+          <img
+            src="./assets/img/photography/mcdonalds-2.webp"
+            alt="McDonald's Sign"
+          />
+          <figcaption><h4>McDonald's Sign</h4></figcaption>
+        </figure>
+        <figure>
+          <img
+            src="./assets/img/photography/audi-3.webp"
+            alt="Audi TTRS Wheel"
+          />
+          <figcaption><h4>Audi Wheel</h4></figcaption>
+        </figure>
+        <figure>
+          <img
+            src="./assets/img/photography/audi-4.webp"
+            alt="Audi TTRS Interior"
+          />
+          <figcaption><h4>Audi Interior</h4></figcaption>
+        </figure>
+        <figure>
+          <img
+            src="./assets/img/photography/audi-5.webp"
+            alt="Audi TTRS Logo"
+          />
+          <figcaption><h4>Audi Logo</h4></figcaption>
+        </figure>
+        <figure>
+          <img
+            src="./assets/img/photography/motorcycle-6.webp"
+            alt="Motorcycle"
+          />
+          <figcaption><h4>Motorcycle</h4></figcaption>
+        </figure>
+        <figure>
+          <img src="./assets/img/photography/temple-7.webp" alt="Wood Temple" />
+          <figcaption><h4>Wood Temple</h4></figcaption>
+        </figure>
+        <figure>
+          <img src="./assets/img/photography/bridge-8.webp" alt="Bridge" />
+          <figcaption><h4>Bridge</h4></figcaption>
+        </figure>
+      </div>
+    </div>
+    <!-- TODO <div class="flex-center flex-col">
+      <h3>Christmas Photoshoots</h3>
+      <div class="images">
+        <figure>
+          <img
+            src="./assets/img/photography/christmas-9.webp"
+            alt="Christmas Photoshoot"
+          />
+          <figcaption><h4>Christmas Photoshoot</h4></figcaption>
+        </figure>
+        <figure>
+          <img
+            src="./assets/img/photography/christmas-10.webp"
+            alt="Christmas Photoshoot"
+          />
+          <figcaption><h4>Christmas Photoshoot</h4></figcaption>
+        </figure>
+        <figure>
+          <img
+            src="./assets/img/photography/christmas-11.webp"
+            alt="Christmas Photoshoot"
+          />
+          <figcaption><h4>Christmas Photoshoot</h4></figcaption>
+        </figure>
+      </div>
+    </div> -->
+  </body>
+</html>
