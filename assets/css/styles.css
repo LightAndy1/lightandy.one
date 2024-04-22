@@ -351,3 +351,48 @@ p a.youtube:hover {
 p a.reddit:hover {
   color: #ff4500;
 }
+
+button.photo {
+  background-color: var(--accent);
+  width: 170px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transform-origin: bottom right;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 33px;
+  transition: all 0.25s cubic-bezier(0, 0, 0, 1);
+  z-index: 100;
+}
+
+button.photo img {
+  width: 30px;
+  transition: all 0.33s cubic-bezier(0, 0, 0, 1);
+}
+
+button.photo:hover img {
+  transform: rotate(-15deg);
+}
+
+button.photo:active img {
+  transform: rotate(10deg);
+}
+
+button.photo:hover {
+  transform: scale(1.075);
+  background-color: var(--secondary);
+  color: #e5eef6;
+}
+
+button.photo:active {
+  transform: scale(1.033);
+  background-color: var(--secondary);
+}
